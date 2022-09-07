@@ -1,0 +1,58 @@
+---
+- hosts: all
+  gather_facts: false
+  become: true
+  tasks:
+    - name: Development tools are installed
+      yum:
+        name: "@Development tools"
+
+    - name: kernel-headers is installed
+      yum:
+        name: kernel-headers
+
+    - name: kernel-devel is installed
+      yum:
+        name: kernel-devel
+
+    - name: epel-release is installed
+      yum:
+        name: epel-release
+
+    - name: htop is installed
+      yum:
+        name: htop
+
+    - name: drivers and libraries and xmas_tree_workload are built
+      command:
+        cmd: make -C /vagrant
+      become: false
+
+    - name: busy module is loaded
+      shell:
+        cmd: "insmod /vagrant/kernel/drivers/busy/busy.ko 2> /dev/null || :"
+
+    - name: /dev/busy is present
+      command:
+        cmd: mknod /dev/busy c 63 1
+        creates: /dev/busy
+
+    - name: permission of /dev/busy is as expected
+      file:
+        path: /dev/busy
+        mode: "0666"
+
+    - name: /home/vagrant/.config/htop directory is present
+      file:
+        path: /home/vagrant/.config/htop
+        state: directory
+        recurse: yes
+        mode: "0700"
+      become: false
+
+    - name: /home/vagrant/.config/htop/htoprc is present
+      copy:
+        src: htoprc
+        dest: /home/vagrant/.config/htop
+        mode: "0664"
+      become: false
