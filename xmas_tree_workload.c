@@ -6,8 +6,10 @@
 #include <sys/types.h>
 #include <utils.h>
 
-#define MAX_NUM_THREADS 16
+#define TREE_WIDTH_MAX 16
 #define TREE_RATE_MAX 256U
+
+#define MAX_NUM_THREADS TREE_WIDTH_MAX
 
 struct tree_thread_args
 {
