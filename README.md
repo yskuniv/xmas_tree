@@ -1,5 +1,7 @@
 # xmas_tree
 
+You can see a nice Xmas tree :)
+
 ## Requirements
 
 - Ansible
