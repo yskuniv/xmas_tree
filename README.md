@@ -44,7 +44,7 @@ project directory. Please run the requested command again.
 $
 ```
 
-Run `./build_and_start_tree.sh` again. Then the building will start. Wait a moment to finish it.
+Run `./build_and_start_tree.sh` again, then the building will start. Wait a moment to finish it.
 
 ```console
 $ ./build_and_start_tree.sh
