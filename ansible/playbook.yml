@@ -37,7 +37,7 @@
         cmd: mknod /dev/busy c 63 1
         creates: /dev/busy
 
-    - name: permission of /dev/busy is correct
+    - name: permission of /dev/busy is as expected
       file:
         path: /dev/busy
         mode: "0666"
