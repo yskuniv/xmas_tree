@@ -20,7 +20,7 @@ $ git clone https://github.com/yskuniv/xmas_tree.git
 $ cd xmas_tree/
 ```
 
-Run `./build_and_start_tree.sh` once, then you're asked to install a vagrant plugin. Just type 'y' and Enter to continue.
+Run `./build_and_start_tree.sh` once, then you're asked to install a vagrant plugin locally. Just type 'y' and Enter to continue.
 
 ```console
 $ ./build_and_start_tree.sh
