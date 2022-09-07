@@ -57,13 +57,14 @@ int main(int argc, char *argv[])
     }
 
     const int tree_width = atoi(argv[1]);
-    const int num_threads = tree_width;
 
     if (tree_width <= 0 || tree_width > TREE_WIDTH_MAX)
     {
         fputs("Error: illegal tree width specified\n", stderr);
         exit(1);
     }
+
+    const int num_threads = tree_width;
 
     pthread_t threads[MAX_NUM_THREADS];
     struct tree_thread_args th_args[MAX_NUM_THREADS];
