@@ -1,5 +1,6 @@
 CC = gcc
 CFLAGS = -std=gnu99 -Wall -I lib/busy/include -I lib/utils/include
+LDFLAGS = -L lib/busy/lib -L lib/utils/lib
 
 .PHONY: all
 all: drivers lib xmas_tree_workload
@@ -13,7 +14,7 @@ lib:
 	make -C lib
 
 xmas_tree_workload: xmas_tree_workload.o
-	gcc $^ -L lib/busy/lib -L lib/utils/lib -lpthread -lbusy -lutils -o $@
+	$(CC) $(LDFLAGS) $^ -lpthread -lbusy -lutils -o $@
 
 .PHONY: clean
 clean:
