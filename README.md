@@ -20,7 +20,7 @@ $ git clone https://github.com/yskuniv/xmas_tree.git
 $ cd xmas_tree/
 ```
 
-Run `./build_and_start_tree.sh` once, then you're asked to install a vagrant plugin locally. Just type 'y' and Enter to continue.
+Run `./build_and_start_tree.sh` once, then you're asked to install a vagrant plugin locally (it means in the current directory). Just type 'y' and Enter to continue.
 
 ```console
 $ ./build_and_start_tree.sh
@@ -31,7 +31,7 @@ project which are not installed.
 Install local plugins (Y/N) [N]:   # type 'y' and Enter here
 ```
 
-The result is as the following. First time you run `./build_and_start_tree.sh`, it just finished with only installing a necessary plugin.
+The result is as the following. First time you run `./build_and_start_tree.sh`, it just finished with only installing the plugin.
 
 ```console
 Install local plugins (Y/N) [N]: y
