@@ -23,7 +23,7 @@
       yum:
         name: htop
 
-    - name: xmas_tree_workload and drivers are built
+    - name: drivers and libraries and xmas_tree_workload are built
       command:
         cmd: make -C /vagrant
       become: false
