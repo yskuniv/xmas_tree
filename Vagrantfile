@@ -24,8 +24,7 @@ Vagrant.configure("2") do |config|
     config.proxy.http     = http_proxy
     config.proxy.https    = http_proxy
     config.proxy.no_proxy = "localhost,127.0.0.1"
-
-    config.proxy.enabled = {
+    config.proxy.enabled  = {
       apt: false,
       chef: false,
       docker: false,
