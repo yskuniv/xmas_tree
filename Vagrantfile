@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
   end
 
   config.vagrant.plugins = [
-    "vagrant-vbguest"
+    "vagrant-vbguest",
     *(http_proxy ? ["vagrant-proxyconf"] : [])
   ]
 
