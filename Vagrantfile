@@ -15,7 +15,7 @@ Vagrant.configure("2") do |config|
 
   config.vagrant.plugins = [
     "vagrant-vbguest",
-    *(http_proxy ? ["vagrant-proxyconf"] : [])
+    *(http_proxy ? ["vagrant-proxyconf"] : []),
   ]
 
   config.vbguest.installer_options = { allow_kernel_upgrade: true }
