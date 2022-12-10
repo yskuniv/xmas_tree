@@ -20,9 +20,7 @@ $ git clone https://github.com/yskuniv/xmas_tree.git
 $ cd xmas_tree/
 ```
 
-If you are in a proxy environment, you might setup for the proxy.
-
-Edit first line in `Vagrantfile` like the following.
+If you are in a proxy environment, you might setup for the proxy. Edit first line in `Vagrantfile` like the following.
 
 ```ruby
 # http_proxy = nil
