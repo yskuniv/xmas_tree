@@ -34,7 +34,7 @@ Vagrant.configure("2") do |config|
   ...
 ```
 
-Run `./build_and_start_tree.sh` once, then you're asked to install a vagrant plugin locally (it means in the current directory). Just type 'y' and Enter to continue.
+Now, run `./build_and_start_tree.sh` once, then you're asked to install a vagrant plugin locally (it means in the current directory). Just type 'y' and Enter to continue.
 
 ```console
 $ ./build_and_start_tree.sh
