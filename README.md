@@ -32,7 +32,7 @@ Vagrant.configure("2") do |config|
   ...
 ```
 
-Now, run `./build_and_start_tree.sh` once, then you're asked to install a vagrant plugin locally (it means in the current directory). Just type 'y' and Enter to continue.
+Now, run `./build_and_start_tree.sh` once, then you're asked to install a vagrant plugin locally (It means in the current directory). Just type 'y' and Enter to continue.
 
 ```console
 $ ./build_and_start_tree.sh
@@ -81,4 +81,4 @@ Bringing machine 'default' up with 'virtualbox' provider...
 ...
 ```
 
-Finally, you can see the nice tree. Enjoy your tree and Merry Xmas!!
+Finally, you can see the nice tree. Enjoy your tree and Merry Xmas!
