@@ -20,6 +20,20 @@ $ git clone https://github.com/yskuniv/xmas_tree.git
 $ cd xmas_tree/
 ```
 
+If you are in a proxy environment, you might setup for the proxy.
+
+Edit first line in `Vagrantfile` like the following.
+
+```ruby
+# http_proxy = nil
+http_proxy = "<your proxy url>"
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "centos/7"
+  config.vm.synced_folder ".", "/vagrant", type: "virtualbox"
+  ...
+```
+
 Run `./build_and_start_tree.sh` once, then you're asked to install a vagrant plugin locally (it means in the current directory). Just type 'y' and Enter to continue.
 
 ```console
