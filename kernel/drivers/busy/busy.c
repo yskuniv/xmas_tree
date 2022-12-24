@@ -25,61 +25,61 @@ static ssize_t busy_read_write_common(size_t count);
 static void do_busy(size_t count);
 
 static const struct file_operations busy_fops = {
-    .open = busy_open,
-    .release = busy_close,
-    .read = busy_read,
-    .write = busy_write,
+	.open = busy_open,
+	.release = busy_close,
+	.read = busy_read,
+	.write = busy_write,
 };
 
 static int busy_init(void)
 {
-    printk("busy device loaded\n");
+	printk("busy device loaded\n");
 
-    register_chrdev(DEVICE_MAJOR, DEVICE_NAME, &busy_fops);
+	register_chrdev(DEVICE_MAJOR, DEVICE_NAME, &busy_fops);
 
-    return 0;
+	return 0;
 }
 
 static void busy_exit(void)
 {
-    printk("busy device unloaded\n");
+	printk("busy device unloaded\n");
 
-    unregister_chrdev(DEVICE_MAJOR, DEVICE_NAME);
+	unregister_chrdev(DEVICE_MAJOR, DEVICE_NAME);
 }
 
 static int busy_open(struct inode *inode, struct file *file)
 {
-    return 0;
+	return 0;
 }
 
 static int busy_close(struct inode *inode, struct file *file)
 {
-    return 0;
+	return 0;
 }
 
 static ssize_t busy_read(struct file *filp, char __user *buf, size_t count, loff_t *f_pos)
 {
-    return busy_read_write_common(count);
+	return busy_read_write_common(count);
 }
 
 static ssize_t busy_write(struct file *filp, const char __user *buf, size_t count, loff_t *f_pos)
 {
-    return busy_read_write_common(count);
+	return busy_read_write_common(count);
 }
 
 static ssize_t busy_read_write_common(size_t count)
 {
-    do_busy(count);
+	do_busy(count);
 
-    return -EBUSY;
+	return -EBUSY;
 }
 
 static void do_busy(size_t count)
 {
-    volatile size_t i;
+	volatile size_t i;
 
-    for (i = 0; i < count; i++)
-        ;
+	for (i = 0; i < count; i++)
+		;
 }
 
 module_init(busy_init);
