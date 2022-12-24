@@ -47,9 +47,6 @@ static void busy_exit(void)
     unregister_chrdev(DEVICE_MAJOR, DEVICE_NAME);
 }
 
-module_init(busy_init);
-module_exit(busy_exit);
-
 static int busy_open(struct inode *inode, struct file *file)
 {
     return 0;
@@ -84,3 +81,6 @@ static void do_busy(size_t count)
     for (i = 0; i < count; i++)
         ;
 }
+
+module_init(busy_init);
+module_exit(busy_exit);
