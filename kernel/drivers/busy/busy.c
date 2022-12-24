@@ -33,7 +33,7 @@ static const struct file_operations busy_fops = {
 
 static int busy_init(void)
 {
-    printk("busy loaded\n");
+    printk("busy device loaded\n");
 
     register_chrdev(DEVICE_MAJOR, DEVICE_NAME, &busy_fops);
 
@@ -42,7 +42,7 @@ static int busy_init(void)
 
 static void busy_exit(void)
 {
-    printk("busy unloaded\n");
+    printk("busy device unloaded\n");
 
     unregister_chrdev(DEVICE_MAJOR, DEVICE_NAME);
 }
